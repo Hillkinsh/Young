@@ -1,0 +1,57 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;  
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.taStyle{
+  position:relative;
+  width:90%;
+  margin:30rpx 0 0 40rpx;
+  font-size:35rpx;
+  font-family: '微软雅黑';
+  color:#8a8a8a;
+}
+.addImg{
+  margin-top:10rpx;
+  margin-left: 37rpx;
+  width: 130rpx;
+  height:130rpx;
+}
+.btn{
+  background-color: #48C23D;
+  color:white;
+}
+.submitRant{
+    width:100%;
+    height:80rpx;
+    position: absolute;
+    top:950rpx;
+    background-color: #ff4f79;
+    border-radius: 5rpx;
+    color:#fff;
+    text-align: center;
+    font-size:35rpx;
+    font-family: '微软雅黑';
+    line-height: 80rpx;
+}
+.resetRant{
+  position: absolute;
+    top:1050rpx;
+    background-color: #aaa;
+}

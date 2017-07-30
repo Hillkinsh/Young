@@ -1,0 +1,17 @@
+    <view>
+      <image class = 'logo' src = 'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/27/04b0963840d56567804def20fb672656.png'/>
+    </view>
+    <view class = 'containbox'>
+    <view bindtap = "roast">
+      <image class = 'publish' src = 'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/26/dee1a9f3401c179780a1f6cf62791c83.png'/>
+      <view >实名吐槽</view>
+    </view>
+    <view bindtap = 'anonRoast'>
+      <image class = 'publish' src = 'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/26/8c95b16a4061fa0880992bfa10a440e3.png'/>
+      <view >匿名吐槽</view>
+    </view>
+    <view bindtap = "event">
+      <image class = 'publish' src = 'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/26/a9cf4ec140c0dd998026f10aa02218ca.png'/>
+      <view >发布活动</view>
+    </view>
+</view>

@@ -1,0 +1,20 @@
+page{
+    font-family: '微软雅黑'
+}
+.containbox{
+  width:750rpx;
+  height:700rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items:flex-end;
+}
+.logo{
+  height: 290rpx;
+  width:620rpx;
+  margin:60rpx 0 0 60rpx;
+}
+.publish{
+  width:155rpx;
+  height:155rpx;
+}

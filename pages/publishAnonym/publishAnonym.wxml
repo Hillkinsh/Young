@@ -1,0 +1,22 @@
+<!--pages/event/event.wxml-->
+<view ><!--class="section"-->
+  <form bindsubmit="bindFormSubmit" bindreset="formReset">
+    <textarea class='taStyle' placeholder="隐着身说两句悄悄话..." name="textarea"  auto-focus/>
+     
+    <view class="thumb-wrapper">
+      <block wx:for="{{picPaths}}" wx:for-item="thumb" wx:for-index="thumbIndex" wx:key="{{thumb.url}}">
+        <image mode="aspectFill" class="addImg" src="{{thumb.url}}" 
+        data-current="{{thumb.url}}"
+        data-urls="{{thumb}}"
+         catchtap="onPreviewImage" binderror="onImageError"></image>
+      </block>
+      <image src='../../images/icon/添加照片.png' class="addImg" bindtap="chooseImageTap"/>
+    </view>
+    
+    <view class='submitRant1'><!--style="display:flex;margin-top:30px;"-->
+      <!--<button style="width:30%" formType="reset" >取消</button>-->
+      <button  class='submitRant' formType="submit" >发布匿名吐槽</button>
+    </view>
+  </form>
+</view>
+

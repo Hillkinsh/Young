@@ -1,0 +1,84 @@
+/* pages/actionDetail/actionDetail.wxss */
+page{
+ font-family:'微软雅黑';
+  font-size: 30rpx;
+}
+
+.image{
+  width: 100%;
+  height:100%;
+}
+.styleDetail{
+  color:#262626;
+  padding-left: 45rpx;
+}
+.aaa{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 35rpx;
+}
+.content{
+  width:175rpx;
+  font-size:35rpx; 
+}
+.eventColor{
+  /*background: greenyellow;*/
+  color:#4b4b4b;
+   font-weight: normal;
+   margin-top:5rpx;
+  font-size:30rpx; 
+  /*line-height: 35rpx;*/
+}
+.detail{
+  margin-top:35rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contentDetail{
+  width:175rpx;
+ font-size:35rpx; 
+}
+.contentDetailRight{
+  width:480rpx;
+  /*background: greenyellow;*/
+  margin-right:50rpx; 
+}
+.participants{
+  margin-top:35rpx;
+  display: flex;
+  flex-direction: row;
+}
+.joiner{
+  width:50rpx;
+  height: 50rpx;
+  display: inline-block;
+  /*border-radius: 25rpx;*/
+  margin-right:10rpx;
+}
+.joinerImg{
+  width:100%;
+  height:100%;
+  border-radius: 25rpx;
+}
+.flexRow{
+  display: flex;
+  flex-direction: row;
+}
+.joining{
+    width:100%;
+    height:80rpx;
+    position: relative;
+    /*top:1000rpx;*/
+    border-radius: 1rpx;
+    margin-top:40rpx;
+    margin-bottom: 50rpx;
+    background-color: #ff4f79;
+    color:#fff;
+    text-align: center;
+    font-size:35rpx;
+    
+    line-height: 80rpx;
+}

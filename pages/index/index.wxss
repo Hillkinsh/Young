@@ -1,0 +1,212 @@
+/**index.wxss**/
+page{
+    font-family: '微软雅黑'
+}
+
+
+
+.card_wrap {
+  margin-top: 0rpx;
+  background: #cccccc;/*#f2f2f6*/
+  position: absolute;
+  width: 100%;
+}
+.card_wrap .card_item {
+  position: absolute;
+  width: 80%;
+}
+
+.card_wrap .card_item.card2 {
+  z-index: 2;
+  width: 70%;/*70*/
+  transform: translateY(150rpx) translateX(110rpx);
+}
+
+.card_wrap .card_item.card3 {
+  width: 60%;
+  transform: translateY(170rpx) translateX(150rpx);
+  z-index: 1;
+}
+
+/*超过三张默认被第三张所覆盖*/
+.card_wrap .card_item image {
+  display: block;
+  width: 100%;
+  height:590rpx;/*600*/
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card_info {/*卡片带字部分样式*/
+    height: 115rpx;
+    background: #ffffff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /*border-left:1rpx solid #A8A8A8;
+    border-right:1rpx solid #A8A8A8;
+    border-bottom:1rpx solid #A8A8A8;*/
+    box-shadow: 6px 8px 30px 1px #ccc;
+}
+
+.info_title{
+  font-size: 35rpx;
+  font-family:"微软雅黑";
+  padding-left: 30rpx;
+  /*padding-top: 12rpx;*/
+}
+.info_content{
+    display: flex;
+    flex-direction: row;
+}
+.info_content_sex{
+    width:85rpx;
+    height:35rpx;
+    background-color: #59d3fd;
+    border-radius: 5rpx;
+    font-family:"微软雅黑";
+    font-size:25rpx;
+    color:#fff;
+    line-height: 35rpx;
+    margin-left: 25rpx;
+    text-align: center;
+}
+.info_content_constel{
+    width:90rpx;
+    height:35rpx;
+    background-color: #F0E66A;
+    border-radius: 5rpx;
+    font-family:"微软雅黑";
+    font-size:25rpx;
+    color:#fff;
+    line-height: 35rpx;
+    margin-left: 10rpx;
+    text-align: center;
+}
+.info_content_university{
+    font-family:"微软雅黑";
+    font-size:25rpx;
+    color:#BBBBBB;
+    margin-left: 100rpx;
+}
+.info_content_school{
+    font-family:"微软雅黑";
+    font-size:25rpx;
+    color:#BBBBBB;
+    margin-left: 10rpx;
+}
+
+.card_info_other{
+    height: 100rpx;/*160*/
+    background: ghostwhite;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 6px 8px 30px 1px #ccc;/*6px 8px 50px 10px #ccc*/
+
+}
+
+
+
+
+/**********************要和不要的区域******************************/
+.operate-area {/*要那个区域的上下位置*/
+  /*margin:0 auto;*/
+  margin-top: 920rpx;
+  display: flex; /*用flex布局更方便。*/
+    position: absolute;
+    width:100%;
+    /*用百分比实现自适应布局*/
+    flex-direction: row;
+}
+/*.operate-area view{
+  display: inline-block;
+}*/
+.operate-area .want1{
+  /*margin: 0 auto;*/
+  width: 135rpx;/*120*/
+  height: 135rpx;/*120*/
+  border-radius: 50%;
+  
+  text-align: center;
+  margin-left:200rpx;
+  background-color: #EDEDED;
+}
+.operate-area .want2{
+  text-align: center;
+  width: 135rpx;/*120*/
+  height: 135rpx;/*120*/
+  border-radius: 50%;
+  background-color: #EDEDED;
+  margin-left:100rpx;
+}
+
+.operate-area .closeImg{
+    width: 115rpx;
+    height: 115rpx;
+    margin:10rpx 0 0 0;
+}
+.closeImg:active{
+    width:99rpx;
+    height:99rpx;
+    margin-top: 18rpx;
+}
+.heartImg{
+     width: 115rpx;
+    height: 115rpx;
+    margin:10rpx 0 0 0;
+}
+.heartImg:active{
+    width:99rpx;
+    height: 99rpx;
+    margin-top: 18rpx;
+}
+
+.inline_block view{
+    display: inline-block;
+
+}
+.operate-area .noWant{
+  margin: 0 auto;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  padding: 4px;
+  background-color: #ff7981;
+  text-align: center;
+}
+.operate-area .noWant view{
+  margin-top: 40rpx;
+  color: white;  
+}
+
+
+/*蒙版遮住防止下一张进行滑动*/
+.card_opacity {
+    height: 160rpx;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /*box-shadow: 6px 8px 50px 10px #ccc;*/
+}
+.card_info_opacity {
+    height: 160rpx;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color:#FFFFF0;
+}
+/*要和不要的点击动画,貌似也没啥用*/
+.ripple {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 100%;
+    height:10px;
+    width:10px;
+    margin-top: -90px;
+    position: absolute;
+    -webkit-transform: scale(0);
+    z-index: 999;
+}
+@-webkit-keyframes ripple {
+    100% {
+    -webkit-transform: scale(12);
+    transform: scale(12);
+    background-color: transparent;
+    }
+}

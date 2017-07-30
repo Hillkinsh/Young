@@ -1,0 +1,102 @@
+<!--pages/rantDetail/rantDetail.wxml-->
+<view class="detail">
+
+    <view class="detail-list">
+        <view class="list-item">
+
+            <!-- 用户信息 -->
+            <view class="hd" >
+                <image class="avatar" src="{{item.avatar}}"></image>
+                <view class="username">{{item.nickName}}</view>
+            </view>
+
+            <!-- 内容 -->
+            <view class="bd">
+                <view class="text-wrapper">{{item.content}}</view>
+                <!-- 一张图片 -->
+                <view class="preview-wrapper" wx:if="{{item.picture.length == 1}}" 
+                data-current="{{item}}" data-urls="{{item}}" catchtap="onPreviewImage">
+                    <image class="preview-img" src="{{item.picture[0].url}}" mode="widthFix"></image>
+                    <view class="preview-icon"></view>
+                </view>
+                <!-- 多张图片 -->
+                <view class="thumb-wrapper" wx:if="{{item.picture.length > 1}}">
+                    <block wx:for="{{item.picture}}" wx:for-item="thumb" wx:for-index="thumbIndex" wx:key="{{thumb.url}}">
+                        <image mode="widthFix" class="thumb-item " src="{{thumb.url}}"
+                         data-current="{{item}}" data-urls="{{item}}" catchtap="onPreviewImage" ></image>
+                    </block>
+                </view>
+            </view>
+            <!-- footer 点赞评论分享 -->
+            <view class="ft bdr-top bdr-bottom">
+                <view class='like' ><!--class="btn btn-digg bdr-r "-->
+                   <text class="iconfont icon-xihuan likeIt " data-detail="{{item}}" bindtap="likeIt"> {{like_count}}</text>
+                </view>
+                <view>
+                  <text class='iconfont icon-pinglun1 commentIt' data-detail="{{item}}"> {{comment_count}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <!-- 评论 -->
+    <view class="comments-wrapper" wx:if="{{item.commentArray.length}}">
+        <!-- 热门评论 -->
+        <view class="comments" >
+            <view class="comments-tt">评论列表 ({{item.commentArray.length}})</view>
+            <block wx:for="{{item.commentArray}}" wx:key="{{item}}">
+                <view class="comments-item">
+                    <image class="avatar" src="{{item.avatar}}"></image>
+                    <view class="comments-con bdr-top">
+                        <view class="comments-hd">
+                            <view class="username">
+                                {{item.nickName}}
+                            </view>
+                        </view>
+                        <view class="comments-bd">
+                            {{item.comment_content}}
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="comments-wrapper" wx:else = "{{!commentArray.length}}" >
+        <view class="comments" >
+            <view class="comments-tt">暂无评论，快来抢沙发吧！</view>
+        </view>
+    </view>
+
+  <!--评论盒子-->
+  <view class="cf-bg" catchtap="cemojiCfBg" style="display:{{cfBg ? 'block' : 'none'}}"></view>
+  <view class="comment-fixed">
+    <view class="cf-box">
+      <view class="emoji iconfont icon-emoji" catchtap="emojiShowHide"></view>
+      <textarea class="cf-content" bindfocus="textAreaFocus" maxlength="200" 
+      bindblur="textAreaBlur" auto-height value="{{content}}" placeholder="我要评论" />
+      <text class="cf-send touch-active" bindtap="send">发送</text>
+    </view>
+
+    <!--emoji表情盒子-->
+    <view class="emoji-box {{isShow ? 'emoji-move-in' : 'emoji-move-out'}} {{isLoad ? 'no-emoji-move' : ''}}">
+      <scroll-view scroll-y="true" bindscroll="emojiScroll" style="height:200px">
+        <block wx:for="{{emojis}}" wx:for-item="e" wx:key="">
+          <view class="emoji-cell">
+            <image class="touch-active" catchtap="emojiChoose" src="http://soupu.oss-cn-shanghai.aliyuncs.com/emoji/{{e.emoji}}.png" data-emoji="{{e.char}}" data-oxf="{{e.emoji}}"></image>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+
+
+
+    <!-- 加载更多 -->
+    <view class="loadMore" wx:if="{{ !isOver&&hasMore}}">
+        <view></view>
+        <view></view>
+        <view></view>
+        <view></view>
+        <view></view> 数据加载中...
+    </view>
+</view>

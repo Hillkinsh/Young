@@ -1,0 +1,168 @@
+let indexData = [
+    {
+    userID:1234567890,
+    avatar:'http://bmob-cdn-11557.b0.upaiyun.com/2017/07/02/86b3d143407bdf1e8098751f42453bb2.png',
+    picture:[
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/07/02/6d345d814080e76c804f12047b69852e.png',
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/07/02/6532e32240d139708012ee05db35024c.png',
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/26/2c2a633e403a53da80872fa972d64410.png'
+    ], //图片列表
+    nickName:'布兰妮 ',
+    sex:'女',
+    birthday:'1992/12/02',
+    university:'西电',
+    school:'计院',
+    eatArray:['aaa','bbb','ccc'],
+    sportArray:['sss','ppp'],
+    watchArray:['000','111','222','555'],
+    listenArray:['fff','ggg','uuu'],
+    playArray:['zzz','xxx'],
+},{
+    userID:1234567891,
+    avatar:'http://bmob-cdn-11557.b0.upaiyun.com/2017/07/02/6d345d814080e76c804f12047b69852e.png',
+    picture:[
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/27/695d01aa40dc4882804dff38f0a7dc1d.png',
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/27/efbef36040ddd67280229c83d7a35da3.png',
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/26/2c2a633e403a53da80872fa972d64410.png'
+    ], //图片列表
+    nickName:'希尔顿',
+    sex:'女',
+    birthday:'1993/2/12',
+    university:'西电',
+    school:'计院',
+    eatArray:['aaa','bbb','ccc'],
+    sportArray:['sss','ppp'],
+    watchArray:['000','111','222','555'],
+    listenArray:['fff','ggg','uuu'],
+    playArray:['zzz','xxx'],
+},{
+    userID:1234567892,
+    avatar:'http://bmob-cdn-11557.b0.upaiyun.com/2017/07/02/1bce73d74053723680519e5b346e410b.png',
+    picture:[
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/27/695d01aa40dc4882804dff38f0a7dc1d.png',
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/27/efbef36040ddd67280229c83d7a35da3.png',
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/26/2c2a633e403a53da80872fa972d64410.png'
+    ], //图片列表
+    nickName:'安吉丽娜 ',
+    sex:'女',
+    birthday:'1997/1/02',
+    university:'西电',
+    school:'计院',
+    eatArray:['aaa','bbb','ccc'],
+    sportArray:['sss','ppp'],
+    watchArray:['000','111','222','555'],
+    listenArray:['fff','ggg','uuu'],
+    playArray:['zzz','xxx'],
+},{
+    userID:1234567893,
+    avatar:'http://bmob-cdn-11557.b0.upaiyun.com/2017/07/02/6532e32240d139708012ee05db35024c.png',
+    picture:[
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/27/695d01aa40dc4882804dff38f0a7dc1d.png',
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/27/efbef36040ddd67280229c83d7a35da3.png',
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/26/2c2a633e403a53da80872fa972d64410.png'
+    ], //图片列表
+    nickName:'叶莲娜 ',
+    sex:'女',
+    birthday:'1999/5/02',
+    university:'西电',
+    school:'计院',
+    eatArray:['aaa','bbb','ccc'],
+    sportArray:['sss','ppp'],
+    watchArray:['000','111','222','555'],
+    listenArray:['fff','ggg','uuu'],
+    playArray:['zzz','xxx'],
+},{
+    userID:1234567894,
+    avatar:'http://bmob-cdn-11557.b0.upaiyun.com/2017/07/02/6e036a59403d9f4580d0ca00c79ab10a.png',
+    picture:[
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/27/695d01aa40dc4882804dff38f0a7dc1d.png',
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/27/efbef36040ddd67280229c83d7a35da3.png',
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/26/2c2a633e403a53da80872fa972d64410.png'
+    ], //图片列表
+    nickName:'珍妮佛 ',
+    sex:'男',
+    birthday:'1995/2/02',
+    university:'西电',
+    school:'计院',
+    eatArray:['aaa','bbb','ccc'],
+    sportArray:['sss','ppp'],
+    watchArray:['000','111','222','555'],
+    listenArray:['fff','ggg','uuu'],
+    playArray:['zzz','xxx'],
+},{
+    userID:1234567895,
+    avatar:'http://bmob-cdn-11557.b0.upaiyun.com/2017/07/02/c8eade634069fbd980b8c6eeca8637be.png',
+    picture:[
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/27/695d01aa40dc4882804dff38f0a7dc1d.png',
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/27/efbef36040ddd67280229c83d7a35da3.png',
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/26/2c2a633e403a53da80872fa972d64410.png'
+    ], //图片列表
+    nickName:'gakki',
+    sex:'女',
+    birthday:'2001/4/02',
+    university:'西电',
+    school:'计院',
+    eatArray:['aaa','bbb','ccc'],
+    sportArray:['sss','ppp'],
+    watchArray:['000','111','222','555'],
+    listenArray:['fff','ggg','uuu'],
+    playArray:['zzz','xxx'],
+},{
+    userID:1234567896,
+    avatar:'http://bmob-cdn-11557.b0.upaiyun.com/2017/07/02/c3de898740459bac80fa85c096731825.png',
+    picture:[
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/27/695d01aa40dc4882804dff38f0a7dc1d.png',
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/27/efbef36040ddd67280229c83d7a35da3.png',
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/26/2c2a633e403a53da80872fa972d64410.png'
+    ], //图片列表
+    nickName:'丽贝卡',
+    sex:'女',
+    birthday:'1998/8/02',
+    university:'西电',
+    school:'计院',
+    eatArray:['aaa','bbb','ccc'],
+    sportArray:['sss','ppp'],
+    watchArray:['000','111','222','555'],
+    listenArray:['fff','ggg','uuu'],
+    playArray:['zzz','xxx'],
+},{
+    userID:1234567897,
+    avatar:'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/27/af03424a4043dbcb80a89a3d1dfd8162.png',
+    picture:[
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/27/695d01aa40dc4882804dff38f0a7dc1d.png',
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/27/efbef36040ddd67280229c83d7a35da3.png',
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/26/2c2a633e403a53da80872fa972d64410.png'
+    ], //图片列表
+    nickName:'大萌8',
+    sex:'男',
+    birthday:'1991/12/02',
+    university:'西电',
+    school:'计院',
+    eatArray:['aaa','bbb','ccc'],
+    sportArray:['sss','ppp'],
+    watchArray:['000','111','222','555'],
+    listenArray:['fff','ggg','uuu'],
+    playArray:['zzz','xxx'],
+},{
+    userID:1234567898,
+    avatar:'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/27/af03424a4043dbcb80a89a3d1dfd8162.png',
+    picture:[
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/27/695d01aa40dc4882804dff38f0a7dc1d.png',
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/27/efbef36040ddd67280229c83d7a35da3.png',
+        'http://bmob-cdn-11557.b0.upaiyun.com/2017/06/26/2c2a633e403a53da80872fa972d64410.png'
+    ], //图片列表
+    nickName:'大萌9',
+    sex:'男',
+    birthday:'1991/12/02',
+    university:'西电',
+    school:'计院',
+    eatArray:['aaa','bbb','ccc'],
+    sportArray:['sss','ppp'],
+    watchArray:['000','111','222','555'],
+    listenArray:['fff','ggg','uuu'],
+    playArray:['zzz','xxx'],
+}
+]
+module.exports = {
+    indexData:indexData
+}

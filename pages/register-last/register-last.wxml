@@ -1,0 +1,17 @@
+<view class='weui-toptips weui-toptips_warn' wx:if='{{flag_error}}'>就差照片了呢！</view>
+<view class='containBox'>
+    <view class='avatar'>
+        <image src='{{avatar}}' bindtap='changeImg' class='image'></image>
+    </view>
+    <view class="card_info">
+        <view class="info_title">{{nickName}}</view>
+        <view class="info_content"> 
+            <view class='info_content_sex' style="background-color:{{sex_color}};">{{sex}}  {{age}}</view>
+            <view class='info_content_constel' style="background-color:{{constel_color}}">{{constel}}</view>
+            <view class='info_content_university'>{{university}}</view>
+            <view class='info_content_school'>{{school}}</view>
+        </view> 
+    </view>
+    <button class='btn' bindtap='delayFinish'>开始躁动吧</button>
+
+</view>

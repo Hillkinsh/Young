@@ -1,0 +1,69 @@
+.backg-color{
+  background-color: #F2F2F2;
+ padding-top:30rpx;
+}
+.page__bd{  
+    /*background: url(https://www.itit123.cn/image/meBack.jpg) no-repeat;  */
+    background: url(http://bmob-cdn-11557.b0.upaiyun.com/2017/07/02/5ddb38cc4071de228002cc938760d997.png) no-repeat;
+    background-size:cover; 
+    width: 750rpx;
+    height: 315rpx; 
+    position: absolute;
+    z-index: 0;
+    left:0;
+    top:0;
+} 
+.avatar{
+  width: 160rpx;
+  /*height: 254rpx; */
+  border-radius:50%;
+  position: relative;
+  margin: 0 auto;
+  z-index: 1;
+}
+.avatarImg{
+  width: 144rpx; 
+  height: 144rpx; 
+  /*display: block;*/
+  border-radius:50%;
+  border:8rpx solid #FFF280;
+  background-color: #e5e;
+  text-align: center;
+}
+.name{
+  font-family: '微软雅黑';
+  font-size: 30rpx;
+  color:#000;
+  text-align: center;
+  margin-top:30rpx;
+  position: relative;
+  z-index: 2;
+}
+
+.user-back-color{
+  background-color: #fff;
+  
+}
+.message{
+  margin-top:50rpx;
+}
+.user-icon{
+  margin:15rpx 15rpx 0 10rpx;
+}
+.userIcon{
+  width:35rpx;
+  height:35rpx;
+}
+.loginOut{
+  width:100%;
+  height:90rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+}
+.outPic{
+  margin:26rpx 15rpx 0 40rpx;
+}
+.outText{
+  line-height: 90rpx;
+}

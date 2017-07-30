@@ -1,0 +1,53 @@
+page{
+   background-color: #F2F2F2;
+   font-family: '微软雅黑';
+   /*padding-top:80rpx;*/
+}
+
+.container{
+  width:100%;
+  margin-top:65rpx;
+}
+
+.name{
+  width: 750rpx;
+  height:90rpx;
+  background: #fff;
+  margin-top:15rpx;
+  padding-left:35rpx;
+  display: flex;
+  flex-direction: row;
+  font-family: '微软雅黑';
+  font-size:30rpx;
+  line-height: 90rpx;
+}
+.text{
+  width:130rpx;
+}
+.nameInput{
+  padding-top:23rpx;
+}
+.login{
+  width:84%;
+  height:90rpx;
+  background-color: #FFBA00;
+  color:#fff;
+  font-size: 35rpx;
+  margin-top:35rpx;
+}
+.naviga{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 84%;
+  margin:0 auto;
+  justify-content:space-between;
+  top:415rpx;
+  font-size:30rpx;
+}
+.password{
+  color:#838383;
+}
+.register{
+  color:#FFBA00;
+}

@@ -1,0 +1,34 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;  
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.taStyle{
+  margin:20rpx 0 0 20rpx;
+}
+.addImg{
+  margin-top:10rpx;
+  margin-left: 10rpx;
+  width: 150rpx;
+  height:150rpx;
+}
+.btn{
+  background-color: #48C23D;
+  color:white;
+}

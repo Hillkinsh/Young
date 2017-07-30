@@ -1,0 +1,72 @@
+<!--index.wxml-->
+<view class="container" >
+
+ <view class="card_wrap" disable-scroll="false">
+   <view  wx:for="{{ cardInfoList }}"  wx:key="unique" wx:for-index="id" wx:for-item="item" >
+    <block wx:if="{{id%2 === 0}}"><!--这个block是为了根据id选择渲染的卡片。-->
+        <view class="card_item" catchtouchmove="touchmove" 
+        catchtouchend = "touchend"  
+        style=" z-index: {{index1}};position:absolute;top:{{ballTop}}px; left: {{ballLeft}}rpx;" 
+            animation="{{animationData}}"><!--原来图片的位置在这里定义，其原因呢是因为动态改变图片位置-->
+            <image src="{{ item.avatar }} " data-detail="{{item}}" catchtap="onGoDetail" ></image>
+            <view class="card_info">
+                <view class="info_title">{{item.nickName}}</view>
+                <view class="info_content"> 
+                    <view class='info_content_sex' style="background-color:{{item.data_sex_color}};">
+                        {{item.data_sex}}  {{item.age}}</view>
+                    <view class='info_content_constel' style="background-color:{{item.constel_color}}">{{item.constel}}</view>
+                    <view class='info_content_university'>{{item.university}}</view>
+                    <view class='info_content_school'>{{item.school}}</view>
+                </view> 
+            </view>
+        </view>
+    </block>
+
+    <block wx:else>
+        <view class="card_item" hidden="{{hidden2}}" catchtouchmove="touchmove2"  catchtouchend = "touchend2" 
+        style=" z-index: {{index2}};position:absolute;top:{{ballTop2}}px; left: {{ballLeft2}}rpx;" animation="{{animationData1}}">  
+            <image src="{{ item.avatar }} " data-detail="{{item}}" catchtap="onGoDetail" ></image>
+            <view class="card_info">
+                <view class="info_title">{{item.nickName}}</view>
+                <view class="info_content"> 
+                   <view class='info_content_sex' style="background-color:{{item.data_sex_color}};">
+                        {{item.data_sex}}  {{item.age}}</view>
+                    <view class='info_content_constel' style="background-color:{{item.constel_color}}">{{item.constel}}</view>
+                    <view class='info_content_university'>{{item.university}}</view>
+                    <view class='info_content_school'>{{item.school}}</view>
+                </view> 
+                
+            </view>
+        </view>
+    </block>       
+  </view>
+
+<!--折叠效果.即是图片下面显示像几张图片折叠在一起的效果。
+    hidden3和hidden4表示这两个页面要不要隐藏。
+    
+-->
+        <view class="card_item card2" hidden="{{hidden3}}" >
+            <image  ></image>
+            <view class="card_info_other"></view>
+        </view> 
+
+        <view class="card_item card3" hidden="{{hidden4}}" >
+            <image  ></image>
+            <view class="card_info_other"></view>
+        </view> 
+ <!--折叠效果  class="opacity_image" -->             
+  </view> 
+
+
+
+      <view class="operate-area"><!--点击按钮的动画-->
+            <!--<view class="ripple" style="{{rippleStyle}}"></view>-->
+          <view class="want1" bindtap="imgTransformLeft"  hidden="{{want_hidden}}">
+            <image src="http://bmob-cdn-11557.b0.upaiyun.com/2017/06/30/616dfc2640e64193801fc1915891c7b1.png"  class="closeImg"></image>
+          </view>
+         
+          <view class="want2"  bindtap="imgTransform"  hidden="{{want_hidden}}"><!--bindtouchstart="containerTap"-->
+            <image src="http://bmob-cdn-11557.b0.upaiyun.com/2017/06/30/23b9b52d40efc7d68071978c1a627bd4.png"  class="heartImg"></image>
+          </view>    
+        </view>
+</view>

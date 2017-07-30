@@ -1,0 +1,75 @@
+<view >
+
+  <!--头像轮播-->
+      <swiper indicator-dots="true" autoplay="true" duration="1000"
+       style="height:600rpx; width:750"
+         interval="5000" >
+        <block wx:for="{{swiper}}" wx:key=''>
+            <swiper-item  >
+            <image src="{{item}}" class='image'/>
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <view class="card_info">
+        <view class="info_title">{{data.nickName}}</view>
+        <view class="info_content"> 
+            <view class='info_content_sex' style="background-color:{{data.data_sex_color}};">
+                {{data.data_sex}}  {{data.age}}</view>
+            <view class='info_content_constel' style="background-color:{{data.constel_color}}">{{data.constel}}</view>
+        </view> 
+        <view class='info_content_school univAndSch'>{{data.university}}   {{data.school}}</view>
+    </view>
+    
+    <!--爱吃-->
+    <view class='sportItem'>
+      <image src='../../images/topBar/爱吃ICON.png' class='sport'></image>
+      <view class='sportType'>爱吃：</view>
+      <view class='sportList'>
+        <view wx:for='{{data.eatArray}}' wx:key='' class='sportArray'>
+          <view class='sportCss aichi' >{{item}}</view>
+        </view>
+      </view>
+    </view>
+    <!--爱动-->
+     <view class='sportItem'>
+      <image src='../../images/topBar/爱动ICON.png' class='sport'></image>
+      <view class='sportType'>爱动：</view>
+      <view class='sportList'>
+        <view wx:for='{{sportArray}}' wx:key = '' class='sportArray'>
+          <view class='sportCss aidong'>{{item}}</view>
+        </view>
+      </view>
+    </view>
+    <!--爱看-->
+     <view class='sportItem'>
+      <image src='../../images/topBar/爱看ICON.png' class='sport'></image>
+      <view class='sportType'>爱看：</view>
+      <view class='sportList'>
+        <view wx:for='{{watchArray}}' wx:key = '' class='sportArray'>
+          <view class='sportCss aikan' >{{item}}</view>
+        </view>
+      </view>
+    </view>
+    <!--爱听-->
+     <view class='sportItem'>
+      <image src='../../images/topBar/爱听ICON.png' class='sport'></image>
+      <view class='sportType'>爱听：</view>
+      <view class='sportList'>
+        <view wx:for='{{listenArray}}' wx:key = '' class='sportArray'>
+          <view class='sportCss aiting'>{{item}}</view>
+        </view>
+      </view>
+    </view>
+    <!--爱玩-->
+     <view class='sportItem'>
+      <image src='../../images/topBar/爱玩ICON.png' class='sport'></image>
+      <view class='sportType'>爱玩：</view>
+      <view class='sportList'>
+        <view wx:for='{{playArray}}' wx:key='' class='sportArray'>
+          <view class='sportCss aiwan'>{{item.name}}</view>
+        </view>
+      </view>
+    </view>
+
+</view>

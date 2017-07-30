@@ -1,0 +1,44 @@
+<view class='contain_roast'>
+  <scroll-view style="height:1150rpx;" scroll-top="40" scroll-with-animation="true"
+  scroll-y lower-threshold="100" scroll-into-view="{{scrollTopView}}"
+  bindscrolltoupper="pullDownRefresh"  
+    bindscrolltolower="onScrollToLower" >
+    <view class="info-tip" hidden="{{!tipShow}}">{{tip}}正在刷新</view>
+
+        <block wx:for="{{jokes}}"  wx:key="{{item.uid}}">
+          <view  class="list-item" data-detail="{{item}}" bindtap="onGoDetail">
+            <!-- 用户信息：头像和ID -->
+            <view class='headPart'>
+              <view class="hd" >
+                <image class="avatar" src="{{item.user.avatar}}"></image>
+                <!--<view class="username">{{item.user.nickName}}</view>-->
+              </view>
+              <view class='bubble'>跟我一起{{item.type}}吧！</view>
+              
+              <view class=' aaa' style="color:{{item.isJoin? '#0AD3FF': '#E30117'}}; border-color:{{item.isJoin? '#0AD3FF': '#E30117'}}" >{{item.state}}</view>
+            </view>
+              <!-- 内容 -->
+              <view class="bd">
+                
+                <image  class='bd_pic' src="{{item.picture[0]}}"></image>
+                <view class='content'>
+                  <view class='title'>{{item.title}}</view>
+                  <view class='detail'>活动时间：{{item.eventTime}}</view>
+                  <view class='detail'>活动地点：{{item.eventSpot}}</view>
+                  <view class='detail'>需要人数： {{item.requireNum}}</view>  
+                </view>
+                                                  
+              </view>  
+          </view>
+        </block>
+      
+      <!-- 加载更多 -->
+      <view class="loadMore" hidden="{{!loadMore}}">
+        <view></view>
+        <view></view>
+        <view></view>
+        <view></view>
+        <view></view> 数据加载中...
+      </view>
+    </scroll-view>
+  </view>

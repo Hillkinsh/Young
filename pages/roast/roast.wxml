@@ -1,0 +1,97 @@
+ <view class='selectlBox' disable-scroll="false"><!-- 下拉列表逻辑...-->
+    <view class='sexSelect'><!-- ............性别显示逻辑.....................-->
+        <view class="sex" bindtap="clickSex">
+            <view class="sexShow">{{sexInfo}}</view>
+            <image src="../../images/v6.png" class="turnSex {{sex_selectArea ? 'rotateRight' :''}}"></image> <!--三目法判断图片要不要旋转180。-->
+        </view>
+        <view class='topTriangle' hidden="{{selectSex}}"></view>
+        <view class="sexList" hidden="{{selectSex}}">
+            <view class='sexBlock borderIt' bindtap="sex_mySelect" data-me="实名">
+                <image src='../../images/topBar/实名icon.png'/>
+                <view class=" sexText" >实名</view>
+            </view>
+            <view class='sexBlock' bindtap="sex_mySelect" data-me="匿名">
+                <image src='../../images/topBar/匿名icon.png'/>
+                <view class="sexText " >匿名</view>
+            </view>
+        </view>
+    </view><!-- ............性别显示逻辑.....................-->
+
+    <view class='schoolSelect'><!-- ............学校选择逻辑.....................-->
+      <view class="school" bindtap="clickSchool">
+        <image src="../../images/topBar/定位icon.png" class="showPos"></image>
+        <view class="schoolShow">{{schoolInfo}}</view>
+        <image src="../../images/topBar/箭头icon.png" class="showPic"></image> <!--三目法判断图片要不要旋转180。-->
+      </view>
+        <view class='topTriangleSchool' hidden="{{selectSchool}}"></view>
+        <view class="schoolList" hidden="{{selectSchool}}">
+          <view class="select_one borderIt" bindtap="school_mySelect" data-me="不限学校">不限学校</view>
+          <view class="select_one borderIt" bindtap="school_mySelect" data-me="西安电子科技大学">西安电子科技大学</view>
+          <view class="select_one borderIt" bindtap="school_mySelect" data-me="西安交通大学">西安交通大学</view>
+          <view class="select_one borderIt" bindtap="school_mySelect" data-me="西北工业大学">西北工业大学</view>
+          <view class="select_one borderIt" bindtap="school_mySelect" data-me="西安外国语">西安外国语</view>
+          <view class="select_one" bindtap="school_mySelect" data-me="西安音乐学院">西安音乐学院</view>
+        </view>
+    </view>
+  </view><!-- ............下拉列表逻辑.....................-->
+
+<!--..........................内容显示逻辑.....................-->
+<view class="content">
+  <scroll-view style="height:1150rpx;" scroll-top="40" scroll-with-animation="true" 
+  scroll-y="true" lower-threshold="100" scroll-into-view="{{scrollTopView}}" >
+  
+   
+      <block wx:for="{{jokes}}" wx:if="{{item.userID}}" wx:key=''>
+        <view  class="list-item" >
+          <!-- 用户信息：头像和ID -->
+            <view class="hd" >
+              <image class="avatar" src="{{item.avatar}}"></image>
+              <view class="username">{{item.nickName}}</view>
+            </view>
+            <!-- 内容 -->
+            <view   data-detail="{{item}}" bindtap="onGoDetail">
+              <view class="text-wrapper"><!--下面的第一句是用户言论。第二句是内容标签-->
+                {{item.content}}
+              </view>
+
+              <!-- 一张图片 -->
+              <view class="preview-wrapper" wx:if="{{item.picture.length == 1}}" 
+              data-current="{{item}}" data-urls="{{item}}" catchtap="onPreviewImage">
+                <image class="preview-img" src="{{item.picture[0].url}}" mode="widthFix" 
+                ></image>
+              </view>
+
+              <!-- 多张图片 -->
+              <view class="thumb-wrapper" wx:if="{{item.picture.length > 1}}">
+                <block wx:for="{{item.picture}}" wx:for-item="thumb" wx:for-index="thumbIndex" wx:key="{{thumb.url}}">
+                  <image mode="widthFix" class="thumb-item"  src="{{thumb.url}}" 
+                  data-current="{{item}}" data-urls="{{item}}" catchtap="onPreviewImage" ></image>
+                </block>
+              </view>
+
+            </view>
+             <!-- footer 点赞评论 -->
+             <view class="ft bdr-top bdr-bottom">
+                <view class='like' ><!--class="btn btn-digg bdr-r "-->
+                   <text class="iconfont icon-xihuan likeIt " data-detail="{{item}}" bindtap="likeIt"> {{item.like_count}}</text>
+                </view>
+                
+                <view  data-detail="{{item}}" bindtap="onGoDetail">
+                  <text class='iconfont icon-pinglun1 commentIt' data-detail="{{item}}" > {{item.comment_count}}</text>
+                </view>
+                
+             </view>
+
+        </view>
+      </block>
+   
+    <!-- 加载更多 -->
+    <view class="loadMore" hidden="{{!loadMore}}">
+      <view></view>
+      <view></view>
+      <view></view>
+      <view></view>
+      <view></view> 数据加载中...
+    </view>
+  </scroll-view>
+</view>

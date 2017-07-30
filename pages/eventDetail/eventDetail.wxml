@@ -1,0 +1,42 @@
+<view class='contain'>
+    <swiper indicator-dots="{{indicatorDots}}" style="height:410rpx; width:100%"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{pictureArray}}" wx:key=''>
+            <swiper-item  >
+            <image src="{{item}}" class='image'/>
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <view class='styleDetail'>
+        <view class='aaa'>
+          <view class='content'>活动标题：</view><view class='eventColor'>{{event.title}}</view>
+        </view>
+        <view class='aaa'>
+          <view class='content'>\t发\t\t\t起\t\t人\t\t：</view><view class='eventColor'>{{event.user.nickName}}</view>
+        </view>
+        <view class='aaa'>
+          <view class='content'>活动类别：</view><view class='eventColor'>{{event.type}}</view>
+        </view>
+        <view class='aaa'>
+          <view class='content'>截止时间：</view><view class='eventColor'>{{event.deadline}}</view>
+        </view>
+        <view class='aaa'>
+          <view class='content'>集合人数：</view><view class='eventColor'>{{event.joinNum}}/{{event.requireNum}}</view>
+        </view>
+        <view class='detail'>
+            <view class='contentDetail'>内容详情：</view>
+            <view class='eventColor contentDetailRight'>{{event.content}}</view>
+        </view>
+        <view class='participants'>
+            <view class='content'>参与人员：</view>
+            <block wx:for="{{event.joinerInfo}}" wx:key="{{item.url}}" >
+                <view class='joiner'>
+                    <image src='{{item.avatar}}' data-detail='{{item}}'  class='joinerImg'></image>
+                </view>
+            </block>
+        </view>
+    </view>
+    <button class='joining' bindtap='joining' disabled='{{!event.isJoin}}'>{{event.state}}</button>
+    
+</view>

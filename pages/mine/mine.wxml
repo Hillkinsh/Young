@@ -1,0 +1,53 @@
+ 
+<view class="backg-color"  style="height: {{windowHeight-15}}px; width: {{windowWidth}}px;">  
+    <view class="page__bd"></view>
+    
+    
+        <view class='avatar' >
+            <image class='avatarImg' src='{{avatar}}' />
+        </view>  
+        <view class="name">{{name}}</view>  
+
+  <view class='message'>
+     <view class="weui-cell weui-cell_access user-back-color" bindtap='onGoDetail'>
+       <view class='user-icon'>
+        <image class='userIcon' src='http://bmob-cdn-11557.b0.upaiyun.com/2017/07/30/118d8a20400623d98076690c69dd201e.png'></image>
+       </view>  
+      <view class="weui-cell__bd">  
+        <view style="display: inline-block; vertical-align: middle">个人资料</view>  
+      </view>  
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>  
+     </view>
+
+     <view class="weui-cell weui-cell_access user-back-color" bindtap='onGoRoast'> 
+      <view class='user-icon'>
+        <image class='userIcon' src='http://bmob-cdn-11557.b0.upaiyun.com/2017/07/30/3d77558140b4bf5b80b7fc053843e2c9.png'></image>
+      </view> 
+      <view class="weui-cell__bd">  
+        <view style="display: inline-block; vertical-align: middle">我的吐槽</view>  
+          <!--<view class="weui-badge" style="margin-left: 5px;">8</view>  -->
+        </view>  
+        <!--<view class="weui-cell__ft weui-cell__ft_in-access">详细信息</view>  -->
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>  
+     </view>  
+
+     <view class="weui-cell weui-cell_access user-back-color" bindtap='onGoEvent'> 
+       <view class='user-icon'>
+        <image class='userIcon' src='http://bmob-cdn-11557.b0.upaiyun.com/2017/07/30/94e438a440f4604e806731860ffdeabf.png'></image>
+      </view> 
+       <view class="weui-cell__bd">  
+         <view style="display: inline-block; vertical-align: middle">我的活动</view>  
+       </view>  
+       <view class="weui-cell__ft weui-cell__ft_in-access"></view>  
+     </view>  
+
+     <view class="loginOut" style='margin-top:20rpx;' bindtap='loginOut'> 
+       <image class='userIcon outPic' src='http://bmob-cdn-11557.b0.upaiyun.com/2017/07/30/cbbe295440bf907180c1ddfd6dceee8c.png'></image>
+       <view class="weui-cell__bd outText">  退出登陆</view>  
+     </view>
+
+  </view>
+
+    
+    
+</view>  

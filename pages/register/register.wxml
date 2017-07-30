@@ -1,0 +1,24 @@
+<!--注册后，页面跳转到填资料页面-->
+<view class='weui-toptips weui-toptips_warn' wx:if='{{flag_error}}'>{{errprMsg}}</view>
+<view class='container'>
+  
+  <form bindsubmit="bindFormSubmit" >
+    <view class='name'>
+      <view class='text'>帐号：</view>
+      <input placeholder="手机/邮箱/学号" bindfocus='inputChange' name='account' class='nameInput'/>
+    </view>
+    <view class='name'>
+      <view class='text'>密   码：</view>
+      <input type="password" name='password' bindfocus='inputChange' class='nameInput' />
+    </view>
+    <view class='name'>
+      <view class='text'>确认密码：</view>
+      <input type="password" name='passEnsure' bindfocus='inputChange' class='nameInput' />
+    </view>
+    <button class='login' formType="submit">注册</button>
+  </form>
+  </view>
+  <view class='naviga'>
+    <view class='password' >已有账号？</view>
+    <view class='register'bindtap="onLogin">直接登录</view>
+  </view>

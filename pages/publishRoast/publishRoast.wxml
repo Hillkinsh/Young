@@ -1,0 +1,23 @@
+<!--pages/event/event.wxml-->
+<view ><!--class="section"-->
+  <form bindsubmit="bindFormSubmit" bindreset="formReset">
+    <textarea class='taStyle' placeholder="此时此刻想吐槽的话..." name="textarea"  auto-focus/>
+     
+    <view class="thumb-wrapper">
+      <block wx:for="{{picPaths}}" wx:for-item="thumb" wx:for-index="thumbIndex" wx:key="{{thumb.url}}">
+        <image mode="aspectFill" class="addImg" src="{{thumb.url}}" 
+        data-current="{{thumb.url}}"
+        data-urls="{{thumb}}"
+         catchtap="onPreviewImage" binderror="onImageError"></image>
+      </block>
+      <image src='http://bmob-cdn-11557.b0.upaiyun.com/2017/07/17/b001db514023b1fa80715f236f31d512.png' class="addImg" bindtap="chooseImageTap"/>
+    </view>
+    
+    <view class='submitRant1'><!--style="display:flex;margin-top:30px;"-->
+      <!--<button style="width:30%" formType="reset" >取消</button>-->
+      <button  class='submitRant' formType="submit" >发布实名吐槽</button>
+      <button class='submitRant resetRant' formType="reset" >取消</button>
+    </view>
+  </form>
+</view>
+

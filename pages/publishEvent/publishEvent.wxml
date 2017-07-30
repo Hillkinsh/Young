@@ -1,0 +1,112 @@
+<view class='weui-toptips weui-toptips_warn' wx:if='{{flag_error}}'>有信息尚未完成填写！</view>
+<view class='event'>
+  <form bindsubmit="bindFormSubmit">
+    <view class='item' data-mid='{{info_title}}' bindtap="show">
+      <view class='left'>活动名称</view>
+      <view class='right' name="eventTitle">{{title}}</view>
+    </view>
+    <view class='item' bindtap="showModal">
+      <view class='left'>活动类别</view>
+      <view class='right' name="eventType">{{type}}</view>
+    </view>
+
+     <view class='item'>
+      <view class='left'>报名截止</view>
+      <view class='right timeDate'>
+        <view class="section"> 
+          <picker mode="date" value="deadlineDate" start="2017-01-01"
+           end="2022-1-23" bindchange="deadlineDateChange"> 
+            <view class="picker" name="deadlineDate"> 
+              {{deadlineDate}} 
+            </view> 
+          </picker> 
+        </view> 
+        <view class="section"> 
+          <picker mode="time" value="deadlineTime" start="00:00" end="23:59"
+           bindchange="deadlineTimeChange"> 
+            <view class="picker" name="deadlineTime"> 
+            {{deadlineTime}}
+            </view> 
+          </picker> 
+        </view> 
+      </view>
+    </view>
+   
+    <view class='item' data-mid='{{info_spot}}' bindtap="show">
+      <view class='left'>集合地点</view>
+      <view class='right' name="eventSpot">{{eventSpot}}</view>
+    </view>
+    
+    <view class='item' data-mid='{{info_num}}' bindtap="show">
+      <view class='left'>集结人数</view>
+      <view class='right' name="eventNum">{{requireNum}}</view>
+    </view>
+
+    <view class='itemPicture'>
+      <view class='left'>活动图片</view>
+    </view>
+      
+    <view class="thumb-wrapper">
+      <block wx:for="{{picPaths}}"  wx:key="{{thumb.url}}">
+        <image mode="aspectFill" class="addImg" src="{{item}}" name="eventImg"
+        data-current="{{item.url}}"
+        data-urls="{{item}}"
+         catchtap="onPreviewImage" binderror="onImageError"></image>
+      </block>
+      <image src='http://bmob-cdn-11557.b0.upaiyun.com/2017/06/25/cb4c48ff40b6b08a8069dcad3c201444.png' class="addImg" bindtap="chooseImageTap"/>
+    </view>
+
+    <view class='itemDetail'>
+      <view class='left'>活动详情</view>
+      <textarea class='textArea' name="content" placeholder='活动小秘籍：活动说明写的越清除，越详细，参与者就会越明白，玩起来也会更开心哦!'>
+      </textarea>
+    </view>
+
+   <button  class='submitEvent' formType="submit" >发起新活动</button>
+  </form>
+</view>
+
+<view class="b1" hidden="{{flag}}">
+  <view class="mask" bindtap="hiddenModal"></view>
+  <view class="t_w">
+        <view class="b2">
+          <view class='b2Title'>活动类别</view>
+          <radio-group name="radio-group"  bindchange="listenerRadio">
+             <label class='radioCSS' wx:for-items="{{items}}" wx:key="">
+               <view>{{item.value}}</view>
+               <radio value="{{item.name}}" checked="{{item.checked}}"/>
+             </label>
+          </radio-group>
+        </view>
+     </view>
+</view>
+<view class="b1" hidden="{{flag_title}}">
+  <view class="mask" data-mid='{{info_title}}' bindtap="hidden"></view>
+  <view class="t_w_input">
+        <view class="b2">
+          <view class='b2Title'>活动名称</view>
+          <input class='nickName' data-mid='{{info_title}}' bindchange="change" placeholder="{{eventTitle}}" />
+          <button class='ensure' data-mid='{{info_title}}' bindtap='ensure'>确定</button>
+        </view>
+     </view>
+</view>
+<view class="b1" hidden="{{flag_spot}}">
+  <view class="mask" data-mid='{{info_spot}}' bindtap="hidden"></view>
+  <view class="t_w_input">
+        <view class="b2">
+          <view class='b2Title'>活动地点</view>
+          <input class='nickName' data-mid='{{info_spot}}' bindchange="change" placeholder="{{eventSpot}}" />
+          <button class='ensure' data-mid='{{info_spot}}' bindtap='ensure'>确定</button>
+        </view>
+     </view>
+</view>
+<view class="b1" hidden="{{flag_num}}">
+  <view class="mask" data-mid='{{info_num}}' bindtap="hidden"></view>
+  <view class="t_w_input">
+        <view class="b2">
+          <view class='b2Title'>集结人数</view>
+          <input class='nickName' type="number" data-mid='{{info_num}}' bindchange="change" placeholder="{{eventNum}}" />
+          <button class='ensure' data-mid='{{info_num}}' bindtap='ensure'>确定</button>
+        </view>
+     </view>
+</view>

@@ -1,0 +1,40 @@
+<!--pages/event/event.wxml-->
+<view ><!--class="section"-->
+  <form bindsubmit="bindFormSubmit" bindreset="formReset">
+    <textarea class='taStyle' placeholder="form 中的 textarea" name="textarea"  auto-focus/>
+     
+    <view class="thumb-wrapper">
+      <block wx:for="{{picPaths}}" wx:for-item="thumb" wx:for-index="thumbIndex" wx:key="{{thumb.url}}">
+        <image mode="aspectFill" class="addImg" src="{{thumb.url}}" 
+        data-current="{{thumb.url}}"
+        data-urls="{{thumb}}"
+         catchtap="onPreviewImage" binderror="onImageError"></image>
+      </block>
+      <image src='../../images/icon/add.png' class="addImg" bindtap="chooseimage"/>
+    </view>
+    
+    <view style="display:flex;margin-top:30px;">
+    <button style="width:30%" formType="reset" >取消</button>
+      <button style="width:30%;" class='btn' formType="submit" >提交</button>
+      
+    </view>
+  </form>
+</view>
+
+<!--<form bindsubmit="formBindsubmit" bindreset="formReset">
+  <view style="display:flex;">
+    <label>用户名：</label>
+    <input name="userName" placeholder="请输入用户名！" />
+  </view>
+  <view style="display:flex;">
+    <label>密码：</label>
+    <input name="psw" placeholder="请输入密码！" password="true" />
+  </view>
+  <view style="display:flex;margin-top:30px;">
+    <button style="width:30%;" formType="submit" >登录</button>
+    <button style="width:30%" formType="reset" >重置</button>
+  </view>
+</form>
+<view>{{tip}}</view>
+<view>{{userName}}</view>
+<view>{{psw}}</view>-->

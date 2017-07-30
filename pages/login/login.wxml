@@ -1,0 +1,19 @@
+<view class='weui-toptips weui-toptips_warn'wx:if='{{flag_error}}' >error{{errprMsg}}</view>
+<view class='container'>
+  <form bindsubmit="bindFormSubmit" >
+    <view class='name'>
+      <view class='text'>用户名：</view>
+      <input placeholder="手机/邮箱/学号" bindfocus='inputChange' name='user' class='nameInput'/>
+    </view>
+    <view class='name'>
+      <view class='text'>密   码：</view>
+      <input type="password" bindfocus='inputChange' name='password' class='nameInput' />
+    </view>
+    <button class='login' formType="submit">登录</button>
+  </form>
+  </view>
+  <view class='naviga'>
+    <view class='password' bindtap="onForget">忘记密码?</view>
+    <view class='register'bindtap="onRegister">新用户注册</view>
+  </view>
+

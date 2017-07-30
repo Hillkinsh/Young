@@ -1,0 +1,72 @@
+/* pages/register-last/register-last.wxss */
+page{
+    background:#F2F2F2;
+    font-family:"微软雅黑";
+}
+.containBox{
+    width: 595rpx;
+    margin:100rpx auto;
+}
+.avatar{
+    height:595rpx;
+}
+.image{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 20rpx;
+    border-top-right-radius: 20rpx;
+}
+.card_info {/*卡片带字部分样式*/
+    height: 115rpx;
+    width: 595rpx;
+    margin: 0 auto;
+    background: #ffffff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 6px 8px 30px 1px #ccc;
+}
+.info_title{
+  font-size: 35rpx;
+  padding-left: 30rpx;
+}
+.info_content{
+    display: flex;
+    flex-direction: row;
+}
+.info_content_sex{
+    width:85rpx;
+    height:35rpx;
+    border-radius: 5rpx;
+    font-size:25rpx;
+    color:#fff;
+    line-height: 35rpx;
+    margin-left: 25rpx;
+    text-align: center;
+}
+.info_content_constel{
+    width:90rpx;
+    height:35rpx;
+    border-radius: 5rpx;
+    font-size:25rpx;
+    color:#fff;
+    line-height: 35rpx;
+    margin-left: 10rpx;
+    text-align: center;
+}
+.info_content_university{
+    font-size:25rpx;
+    color:#BBBBBB;
+    margin-left: 100rpx;
+}
+.info_content_school{
+    font-size:25rpx;
+    color:#BBBBBB;
+    margin-left: 10rpx;
+}
+.btn{
+    width:595rpx;
+    height:90rpx;
+    margin:100rpx auto;
+    background: #FFBA00;
+    color:#fff;
+}

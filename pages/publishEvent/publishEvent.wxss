@@ -1,0 +1,101 @@
+.event{
+  font-family: '微软雅黑';
+  font-size:30rpx;
+  margin-top:60rpx;
+}
+.item{
+  height:90rpx;
+  width:93%;
+  border-bottom:1rpx solid #e7e7e7;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+.left{
+  color:#000000;
+  line-height: 90rpx;
+}
+.right{
+  color:#656565;
+  font-family: '微软雅黑';
+  font-size:30rpx;
+  text-align: right;
+  line-height: 90rpx;
+  height:90rpx;
+  /*margin-left:-200rpx; */
+}
+.itemDetail{
+  /*height:90rpx;*/
+  width:93%;
+  /*border-bottom:1rpx solid #e7e7e7;*/
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+}
+.textArea{
+  width:85%;
+  height:120rpx;
+  overflow: hidden;
+  color:#A4A4A4;
+  font-family: '微软雅黑';
+  font-size:30rpx;
+  line-height: 40rpx;
+  margin:0 auto;
+}
+.itemPicture{
+   width:93%;
+  /*border-bottom:1rpx solid #e7e7e7;*/
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  /*justify-content:space-between;*/
+}
+.addImg{
+  margin-top:10rpx;
+  margin-left: 37rpx;
+  width: 130rpx;
+  height:130rpx;
+}
+.submitEvent{
+    width:95%;
+    height:80rpx;
+    position: relative;
+    /*top:1000rpx;*/
+    margin-top:40rpx;
+    background-color: #61e8e1;
+    color:#fff;
+    text-align: center;
+    font-size:35rpx;
+    font-family: '微软雅黑';
+    line-height: 80rpx;
+}
+
+
+.b1 .mask{ position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 9;}
+.b1 .mask{background: rgba(0,0,0,0.4);}
+.t_w_input{position: fixed;top:65%;width:80%;height:300rpx;left:10%;margin-top:-450rpx;background: #fff;z-index: 999;border-radius:10px;overflow: hidden}
+.t_w{position: fixed;top:65%;width:80%;height:350rpx;left:10%;margin-top:-450rpx;background: #fff;z-index: 999;border-radius:10px;overflow: hidden}
+.b2Title{font-family:'微软雅黑';font-size: 40rpx;margin:20rpx 40rpx 5rpx 40rpx;}
+.radioCSS{display:flex;flex-direction: row;justify-content: space-between;width: 75%;border-bottom: 1rpx solid #e7e7e7;
+  height:70rpx;margin: 0 auto;line-height: 70rpx;font-size: 30rpx;font-family: '微软雅黑';}
+
+.timeDate{display: flex;}
+.section{margin-right:20rpx;}
+.nickName{
+  text-align: left;
+  line-height: 90rpx;
+  width:75%;
+  margin:0 auto;
+  height:90rpx;
+  border-bottom: 1rpx solid #E7E7E7;
+}
+.ensure{
+  background: #1AAD19;
+  color:#fff;
+  width:30%;
+  height:70rpx;
+  font-size:26rpx;
+  margin-top:25rpx;
+}

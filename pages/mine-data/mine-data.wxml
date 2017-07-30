@@ -1,0 +1,238 @@
+<view >
+  <view class='all'>
+    <image class='picture0' src='{{picture0}}' bindtap='changepic0'></image>
+    <view class='rightPic'>
+      <image class='picture1' data-pid='{{picArray[0]}}' src='{{pictureArray[0]}}' bindtap='chooseImageTap'/>
+      <image class='picture1' data-pid='{{picArray[1]}}' src='{{pictureArray[1]}}' bindtap='chooseImageTap'></image>
+    </view>
+    <view class='bottom'>
+      <image class='picture3' data-pid='{{picArray[2]}}' src='{{pictureArray[2]}}' bindtap='chooseImageTap'></image>
+      <image class='picture2' data-pid='{{picArray[3]}}' src='{{pictureArray[3]}}' bindtap='chooseImageTap'></image>
+      <image class='picture2' data-pid='{{picArray[4]}}' src='{{pictureArray[4]}}' bindtap='chooseImageTap'></image>
+    </view>
+  </view>
+
+    <view class='item' data-mid='{{info_name}}' bindtap="show">
+      <view class='left'>昵称</view>
+      <view class='right' name="nickName">{{nickName}}</view>
+    </view>
+    <view class='item' data-mid='{{info_sex}}' bindtap="show">
+      <view class='left'>性别</view>
+      <view class='right' name="sex">{{sex}}</view>
+    </view>
+     <view class='item'>
+      <view class='left'>生日</view>
+      <view class='right'>
+          <picker mode="date" value="birthday" start="1980-01-01"
+           end="2022-1-23" bindchange="birthday"> 
+            <view class="picker" name="birthday"> 
+              {{birthday}} 
+            </view> 
+          </picker> 
+      </view>
+    </view>
+
+    <view class='item' data-mid='{{info_university}}' bindtap="show">
+      <view class='left'>学校</view>
+      <view class='right' name="university"> {{university}} </view>
+    </view>
+    <view class='item' data-mid='{{info_school}}' bindtap="show">
+      <view class='left'>学院</view>
+      <view class='right' name="school">{{school}}</view>
+    </view>
+    <view class='item' data-mid='{{info_wechat}}' bindtap="show">
+      <view class='left'>微信</view>
+      <view class='right' name="wechat">{{wechat}}</view>
+    </view>
+    <view class='item' data-mid='{{info_QQ}}' bindtap="show">
+      <view class='left'>QQ</view>
+      <view class='right' name="QQ">{{QQ}}</view>
+    </view>
+    
+    <!--爱吃-->
+    <view class='sportItem'>
+      <image src='../../images/topBar/爱吃ICON.png' class='sport'></image>
+      <view class='sportType'>爱吃：</view>
+      <view class='sportList'>
+        <view wx:for='{{eatArray}}' wx:key='' class='sportArray'>
+          <view class='sportCss aichi' data-change = '{{item}}' data-hobbyType = '{{hobbyArray[0]}}' bindtap = 'changeIt'>{{item}}</view>
+        </view>
+        <image src='http://bmob-cdn-11557.b0.upaiyun.com/2017/06/26/0d5542b2401c139a80fea155cb24bf27.png' class='addSport' data-hobbyType = '{{hobbyArray[0]}}' bindtap='showIt'></image>
+      </view>
+    </view>
+    <!--爱动-->
+     <view class='sportItem'>
+      <image src='../../images/topBar/爱动ICON.png' class='sport'></image>
+      <view class='sportType'>爱动：</view>
+      <view class='sportList'>
+        <view wx:for='{{sportArray}}' wx:key = '' class='sportArray'>
+          <view class='sportCss aidong' data-change = '{{item}}' data-hobbyType = '{{hobbyArray[1]}}' bindtap = 'changeIt'>{{item}}</view>
+        </view>
+        <image src='http://bmob-cdn-11557.b0.upaiyun.com/2017/06/26/0d5542b2401c139a80fea155cb24bf27.png'  data-hobbyType = '{{hobbyArray[1]}}' class='addSport' bindtap='showIt'></image>
+      </view>
+    </view>
+    <!--爱看-->
+     <view class='sportItem'>
+      <image src='../../images/topBar/爱看ICON.png' class='sport'></image>
+      <view class='sportType'>爱看：</view>
+      <view class='sportList'>
+        <view wx:for='{{watchArray}}' wx:key = '' class='sportArray'>
+          <view class='sportCss aikan' data-change = '{{item}}' data-hobbyType = '{{hobbyArray[2]}}' bindtap = 'changeIt'>{{item}}</view>
+        </view>
+        <image src='http://bmob-cdn-11557.b0.upaiyun.com/2017/06/26/0d5542b2401c139a80fea155cb24bf27.png' data-hobbyType = '{{hobbyArray[2]}}' class='addSport' bindtap='showIt'></image>
+      </view>
+    </view>
+    <!--爱听-->
+     <view class='sportItem'>
+      <image src='../../images/topBar/爱听ICON.png' class='sport'></image>
+      <view class='sportType'>爱听：</view>
+      <view class='sportList'>
+        <view wx:for='{{listenArray}}' wx:key = '' class='sportArray'>
+          <view class='sportCss aiting' data-change = '{{item}}' data-hobbyType = '{{hobbyArray[3]}}' bindtap = 'changeIt'>{{item}}</view>
+        </view>
+        <image src='http://bmob-cdn-11557.b0.upaiyun.com/2017/06/26/0d5542b2401c139a80fea155cb24bf27.png' data-hobbyType = '{{hobbyArray[3]}}' class='addSport' bindtap='showIt'></image>
+      </view>
+    </view>
+    <!--爱玩-->
+     <view class='sportItem'>
+      <image src='../../images/topBar/爱玩ICON.png' class='sport'></image>
+      <view class='sportType'>爱玩：</view>
+      <view class='sportList'>
+        <view wx:for='{{playArray}}' wx:key='' class='sportArray'>
+          <view class='sportCss aiwan' data-change = '{{item}}' data-hobbyType = '{{hobbyArray[4]}}' bindtap = 'changeIt'>{{item}}</view>
+        </view>
+        <image src='http://bmob-cdn-11557.b0.upaiyun.com/2017/06/26/0d5542b2401c139a80fea155cb24bf27.png' data-hobbyType = '{{hobbyArray[4]}}' class='addSport' bindtap='showIt'></image>
+      </view>
+    </view>
+
+</view>
+
+<!--活动一栏，模态框 添加时-->
+<view class="b1"  hidden="{{flag_eat}}">
+  <view class="mask" data-hobbyType = '{{hobbyArray[0]}}' bindtap="hiddenModal"></view>
+  <view class="t_w">
+        <view class="b2">
+          <view class='b2Title'>爱吃类别</view>
+          <input class='sportInput'  data-hobbyType = '{{hobbyArray[0]}}' bindchange="bindChange" placeholder="请输入你的爱好并用空格隔开"/>
+          <button class='submitSport' data-hobbyType = '{{hobbyArray[0]}}' bindtap='submitIt' >确定</button>
+        </view>
+     </view>
+</view>
+<view class="b1"  hidden="{{flag_sport}}">
+  <view class="mask" data-hobbyType = '{{hobbyArray[1]}}' bindtap="hiddenModal"></view>
+  <view class="t_w">
+        <view class="b2">
+          <view class='b2Title'>爱动类别</view>
+          <input class='sportInput'  data-hobbyType = '{{hobbyArray[1]}}' bindchange="bindChange" placeholder="请输入你的爱好并用空格隔开"/>
+          <button class='submitSport' data-hobbyType = '{{hobbyArray[1]}}' bindtap='submitIt' >确定</button>
+        </view>
+     </view>
+</view>
+<view class="b1"  hidden="{{flag_watch}}">
+  <view class="mask" data-hobbyType = '{{hobbyArray[2]}}' bindtap="hiddenModal"></view>
+  <view class="t_w">
+        <view class="b2">
+          <view class='b2Title'>爱看类别</view>
+          <input class='sportInput'  data-hobbyType = '{{hobbyArray[2]}}' bindchange="bindChange" placeholder="请输入你的爱好并用空格隔开"/>
+          <button class='submitSport' data-hobbyType = '{{hobbyArray[2]}}' bindtap='submitIt' >确定</button>
+        </view>
+     </view>
+</view>
+<view class="b1"  hidden="{{flag_listen}}">
+  <view class="mask" data-hobbyType = '{{hobbyArray[3]}}' bindtap="hiddenModal"></view>
+  <view class="t_w">
+        <view class="b2">
+          <view class='b2Title'>爱看类别</view>
+          <input class='sportInput'  data-hobbyType = '{{hobbyArray[3]}}' bindchange="bindChange" placeholder="请输入你的爱好并用空格隔开"/>
+          <button class='submitSport' data-hobbyType = '{{hobbyArray[3]}}' bindtap='submitIt' >确定</button>
+        </view>
+     </view>
+</view>
+<view class="b1"  hidden="{{flag_play}}">
+  <view class="mask" data-hobbyType = '{{hobby_5}}' bindtap="hiddenModal"></view>
+  <view class="t_w">
+        <view class="b2">
+          <view class='b2Title'>爱玩类别</view>
+          <input class='sportInput'  data-hobbyType = '{{hobbyArray[4]}}' bindchange="bindChange" placeholder="请输入你的爱好并用空格隔开"/>
+          <button class='submitSport' data-hobbyType = '{{hobbyArray[4]}}' bindtap='submitIt' >确定</button>
+        </view>
+     </view>
+</view>
+
+<!--昵称-->
+<view class="b1" hidden="{{flag_name}}">
+  <view class="mask" data-mid='{{info_name}}' bindtap="hidden"></view>
+  <view class="t_w">
+        <view class="b2">
+          <view class='b2Title'>昵称</view>
+          <input class='nickName' data-mid='{{info_name}}' bindchange="change" placeholder="{{nickName}}" />
+          <button class='ensure' data-mid='{{info_name}}' bindtap='ensure'>确定</button>
+        </view>
+     </view>
+</view>
+<!--性别-->
+<view class="b1" hidden="{{flag_sex}}">
+  <view class="mask" data-mid='{{info_sex}}' bindtap="hidden"></view>
+  <view class="t_w">
+        <view class="b2">
+          <view class='b2Title'>性别</view>
+          <radio-group name="radio-group"  bindchange="listenerRadio">
+             <label class='radioCSS' wx:for-items="{{sexs}}" wx:key='keys'>
+               <view>{{item.value}}</view>
+               <radio value="{{item.name}}" checked="{{item.checked}}"/>
+             </label>
+          </radio-group>
+        </view>
+     </view>
+</view>
+
+<!--学校-->
+<view class="b1" hidden="{{flag_university}}">
+  <view class="mask" data-mid='{{info_university}}' bindtap="hidden"></view>
+  <view class="t_w_school">
+        <view class="b2">
+          <view class='b2Title'>学校</view>
+          <radio-group name="radio-group"  bindchange="listenerUniversity">
+             <label class='radioCSS' wx:for-items="{{universitys}}"  wx:key='keys'>
+               <view>{{item.value}}</view>
+               <radio value="{{item.name}}" checked="{{item.checked}}"/>
+             </label>
+          </radio-group>
+        </view>
+     </view>
+</view>
+<!--学院-->
+<view class="b1" hidden="{{flag_school}}">
+  <view class="mask" data-mid='{{info_school}}' bindtap="hidden"></view>
+  <view class="t_w">
+        <view class="b2">
+          <view class='b2Title'>学院</view>
+          <input class='nickName' data-mid='{{info_school}}' bindchange="change" placeholder="{{school}}" />
+          <button class='ensure' data-mid='{{info_school}}' bindtap='ensure'>确定</button>
+        </view>
+     </view>
+</view>
+
+<!--微信-->
+<view class="b1" hidden="{{flag_wechat}}">
+  <view class="mask" data-mid='{{info_wechat}}' bindtap="hidden"></view>
+  <view class="t_w">
+        <view class="b2">
+          <view class='b2Title'>微信</view>
+          <input class='nickName' data-mid='{{info_wechat}}' bindchange="change" placeholder="{{wechat}}" />
+          <button class='ensure' data-mid='{{info_wechat}}' bindtap='ensure'>确定</button>
+        </view>
+     </view>
+</view>
+
+<!--QQ-->
+<view class="b1" hidden="{{flag_QQ}}">
+  <view class="mask" data-mid='{{info_QQ}}' bindtap="hidden"></view>
+  <view class="t_w">
+        <view class="b2">
+          <view class='b2Title'>QQ</view>
+          <input class='nickName' data-mid='{{info_QQ}}' bindchange="change" placeholder="{{QQ}}" />
+          <button class='ensure' data-mid='{{info_QQ}}' bindtap='ensure'>确定</button>
+        </view>
+     </view>
+</view>
